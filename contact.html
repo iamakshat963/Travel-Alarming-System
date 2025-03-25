@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Carousel Example</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/animation1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand" href="home.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button class="nav-link btn btn-danger" onclick="showLogoutModal()">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </nav><br>
+
+
+      <div style="color:black" class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="logoutModalLabel">Logout Confirmation</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to logout?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              <a href="login.html" class="btn btn-danger">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 style="text-align: center;">Contact Us</h1><br>
+
+<div class="row">
+    <div class="col-sm-8">
+        <h2 style="text-align: center;">Travel Alarming System</h2><br>
+        <table style="margin-left: 50px;text-align: center;color: white;width: 80%" class="table table-stripped">
+          <tr>
+            <th>Sr.no</td>
+            <th>Team Member</th>
+            <th>Reg.no</th>
+            <th>Email</th>
+            <th>Phone no</th>
+          </tr>
+          
+          <tr>
+            <td>1</td>
+            <td>Akshat Singh</td>
+            <td>12108762</td>
+            <td>akshatsingh.as09@gmail.com</td>
+            <td>(+91) 94171-75978</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Aniket Sharma</td>
+            <td>12107603</td>
+            <td>aniketsharma4226@gmail.com</td>
+            <td>(+91) 70185-19971</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Chandan Choundry</td>
+            <td>12103838</td>
+            <td>chandanchoudhry0001@gmail.com</td>
+            <td>(+91) 90410-79136</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Chandan Parmar</td>
+            <td>12107551</td>
+            <td>chandanparmar2003@gmail.com</td>
+            <td>(+91) 62847-30386</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Karanjot Singh</td>
+            <td>12107552</td>
+            <td>karanjot4855@gmail.com</td>
+            <td>(+91) 98724-29177</td>
+          </tr>
+        </table>
+    </div>  
+    <div class="col-sm-4" style="margin-top: 40px;">
+<div style="width: 60%;" id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="5000">
+      <img src="img/akshat.jpg" class="rounded-circle d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Akshat Singh</h5>
+        12108762
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      <img src="img/aniket.jpg" class="rounded-pill d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block" style="color:grey">
+        <h5>Aniket Sharma</h5>
+        12107603
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      <img src="img/chandanch.jpg" class="rounded-pill d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Chandan Choundry</h5>
+        12103838
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="5000">
+        <img src="img/chandan.jpg" class="rounded-pill d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="color:gray">
+          <h5>Chandan Parmar</h5>
+          12107551
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="5000">
+        <img src="img/karan.jpg" class="rounded-pill d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="color:grey">
+          <h5>Karanjot Singh</h5>
+          12107552
+        </div>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</div><br><br>
+
+<hr>
+<div style=" margin-left: 30px;margin-right: 30px;font-size: small;">
+<p><b>This system is Created for CAP463-Capstone Project in the Guidance of Yamini Bhardwaj</b><br>
+  This system uses Google Map APi (Maps javascript APi,Place APi,Directions APi,Distance Matrix API). The Maps JavaScript API is used  to embed interactive maps directly into web pages.
+  The Places API is used to search for places, retrieve details. The Direction APi is used to get a appropriate route from A to B(if exists). The Distance Matrix API is used find the total Distance and Time to reach the Destination.<br>
+  The system works on the principle of refreshing the data collected by Direction and Distance Matrix APi and show the following of the webpage. if the distance to reach reaches 5km a new webpage will pop as a alarm(mp3) and it will start.
+</p>
+</div>
+
+<script>
+    function showLogoutModal() {
+        $('#logoutModal').modal('show');
+    }
+</script>
+</body>
+</html>
